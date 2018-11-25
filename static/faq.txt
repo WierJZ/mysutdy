@@ -1,0 +1,2 @@
+{"id": 1, "questions": "what is your name?", "answers": "星屋です。おはようございます。", "key_words": "name 叫 名字 名前"}
+{"id": 2, "questions": "How old are you?", "answers": "30歳です。よろしくお願いします。", "key_words": "old age 年龄 多大了  年齢 年をとる"}

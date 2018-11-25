@@ -1,0 +1,690 @@
+[2018-11-23 15:59:41,753] [INFO] "GET /get_first_msg HTTP/1.1" 301 0
+[2018-11-23 15:59:41,763] [INFO] "GET /get_first_msg/ HTTP/1.1" 200 250
+[2018-11-23 15:59:41,917] [WARNING] Not Found: /favicon.ico
+[2018-11-23 15:59:41,917] [WARNING] "GET /favicon.ico HTTP/1.1" 404 2540
+[2018-11-23 16:14:32,170] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:14:32,170] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:14:32,175] [INFO] "GET /get_first_msg/ HTTP/1.1" 200 250
+[2018-11-23 16:14:32,178] [INFO] "GET /get_first_msg/ HTTP/1.1" 200 250
+[2018-11-23 16:14:36,323] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:14:36,328] [INFO] This is an error msg
+[2018-11-23 16:14:36,337] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:14:36,342] [INFO] This is an error msg
+[2018-11-23 16:14:57,520] [ERROR] Internal Server Error: /get_reply/
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 80, in create_connection
+    raise err
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 70, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "G:\python\python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "G:\python\python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000000B4870E06D8>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000000B4870E06D8>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 142, in get_reply
+    all_info.update({"reply": ReplyUtils.get_reply_from_msg(msg, app_flag)})
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 99, in get_reply_from_msg
+    reply = ReplyUtils.tuling123(msg)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 77, in tuling123
+    r = requests.get(url, params=data, proxies=PROXIES)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 510, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000000B4870E06D8>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+[2018-11-23 16:14:57,521] [ERROR] Internal Server Error: /get_reply/
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 80, in create_connection
+    raise err
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 70, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "G:\python\python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "G:\python\python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000000B4870C8588>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000000B4870C8588>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 142, in get_reply
+    all_info.update({"reply": ReplyUtils.get_reply_from_msg(msg, app_flag)})
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 99, in get_reply_from_msg
+    reply = ReplyUtils.tuling123(msg)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 77, in tuling123
+    r = requests.get(url, params=data, proxies=PROXIES)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 510, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000000B4870C8588>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+[2018-11-23 16:14:57,625] [ERROR] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=1&app_flag=0 HTTP/1.1" 500 187863
+[2018-11-23 16:14:57,655] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:14:57,661] [INFO] This is an error msg
+[2018-11-23 16:14:57,708] [ERROR] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=1&app_flag=0 HTTP/1.1" 500 187865
+[2018-11-23 16:14:57,727] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=H&app_flag=0 HTTP/1.1" 200 214
+[2018-11-23 16:14:57,769] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:14:57,773] [INFO] This is an error msg
+[2018-11-23 16:14:57,778] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=H&app_flag=0 HTTP/1.1" 200 214
+[2018-11-23 16:15:08,139] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:15:08,145] [INFO] This is an error msg
+[2018-11-23 16:15:08,149] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=name&app_flag=0 HTTP/1.1" 200 214
+[2018-11-23 16:15:08,153] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:15:08,158] [INFO] This is an error msg
+[2018-11-23 16:15:08,160] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=name&app_flag=0 HTTP/1.1" 200 214
+[2018-11-23 16:15:12,329] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:15:12,331] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:15:12,333] [INFO] This is an error msg
+[2018-11-23 16:15:12,335] [INFO] This is an error msg
+[2018-11-23 16:15:12,338] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=Name&app_flag=0 HTTP/1.1" 200 214
+[2018-11-23 16:15:12,339] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=Name&app_flag=0 HTTP/1.1" 200 214
+[2018-11-23 16:15:25,526] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:15:25,531] [INFO] This is an error msg
+[2018-11-23 16:15:25,539] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:15:25,544] [INFO] This is an error msg
+[2018-11-23 16:15:46,613] [ERROR] Internal Server Error: /get_reply/
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 80, in create_connection
+    raise err
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 70, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "G:\python\python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "G:\python\python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000000B4871633C8>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=J (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000000B4871633C8>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 142, in get_reply
+    all_info.update({"reply": ReplyUtils.get_reply_from_msg(msg, app_flag)})
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 99, in get_reply_from_msg
+    reply = ReplyUtils.tuling123(msg)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 77, in tuling123
+    r = requests.get(url, params=data, proxies=PROXIES)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 510, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=J (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000000B4871633C8>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+[2018-11-23 16:15:46,672] [ERROR] Internal Server Error: /get_reply/
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 80, in create_connection
+    raise err
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 70, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "G:\python\python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "G:\python\python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000000B48718F080>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=J (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000000B48718F080>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 142, in get_reply
+    all_info.update({"reply": ReplyUtils.get_reply_from_msg(msg, app_flag)})
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 99, in get_reply_from_msg
+    reply = ReplyUtils.tuling123(msg)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 77, in tuling123
+    r = requests.get(url, params=data, proxies=PROXIES)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 510, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=J (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000000B48718F080>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+[2018-11-23 16:15:46,746] [ERROR] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=J&app_flag=0 HTTP/1.1" 500 187860
+[2018-11-23 16:15:46,817] [ERROR] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=J&app_flag=0 HTTP/1.1" 500 187860
+[2018-11-23 16:19:51,303] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:19:51,303] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:19:51,308] [INFO] "GET /get_first_msg/ HTTP/1.1" 200 250
+[2018-11-23 16:19:51,309] [INFO] "GET /get_first_msg/ HTTP/1.1" 200 250
+[2018-11-23 16:19:55,601] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:19:55,609] [INFO] This is an error msg
+[2018-11-23 16:19:55,614] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:19:55,615] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=S&app_flag=0 HTTP/1.1" 200 214
+[2018-11-23 16:19:55,620] [INFO] This is an error msg
+[2018-11-23 16:19:55,624] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=S&app_flag=0 HTTP/1.1" 200 214
+[2018-11-23 16:19:59,503] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:19:59,508] [INFO] This is an error msg
+[2018-11-23 16:19:59,509] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:19:59,514] [INFO] This is an error msg
+[2018-11-23 16:20:20,661] [ERROR] Internal Server Error: /get_reply/
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 80, in create_connection
+    raise err
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 70, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "G:\python\python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "G:\python\python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000068C734ECF8>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=P (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000068C734ECF8>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 142, in get_reply
+    all_info.update({"reply": ReplyUtils.get_reply_from_msg(msg, app_flag)})
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 99, in get_reply_from_msg
+    reply = ReplyUtils.tuling123(msg)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 77, in tuling123
+    r = requests.get(url, params=data, proxies=PROXIES)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 510, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=P (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000068C734ECF8>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+[2018-11-23 16:20:20,665] [ERROR] Internal Server Error: /get_reply/
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 80, in create_connection
+    raise err
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 70, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "G:\python\python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "G:\python\python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000068C7340E10>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=P (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000068C7340E10>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 142, in get_reply
+    all_info.update({"reply": ReplyUtils.get_reply_from_msg(msg, app_flag)})
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 99, in get_reply_from_msg
+    reply = ReplyUtils.tuling123(msg)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 77, in tuling123
+    r = requests.get(url, params=data, proxies=PROXIES)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 510, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=P (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000068C7340E10>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+[2018-11-23 16:20:20,767] [ERROR] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=P&app_flag=0 HTTP/1.1" 500 187960
+[2018-11-23 16:20:20,795] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:20:20,817] [INFO] This is an error msg
+[2018-11-23 16:20:20,845] [ERROR] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=P&app_flag=0 HTTP/1.1" 500 187975
+[2018-11-23 16:20:20,890] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=N&app_flag=0 HTTP/1.1" 200 214
+[2018-11-23 16:20:20,895] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:20:20,907] [INFO] This is an error msg
+[2018-11-23 16:20:20,915] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=N&app_flag=0 HTTP/1.1" 200 214
+[2018-11-23 16:20:30,440] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:20:30,441] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:20:30,446] [INFO] This is an error msg
+[2018-11-23 16:20:30,448] [INFO] This is an error msg
+[2018-11-23 16:20:51,567] [ERROR] Internal Server Error: /get_reply/
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 80, in create_connection
+    raise err
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 70, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "G:\python\python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "G:\python\python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000068C7E2B5C0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=%E4%BD%A0%E5%A5%BD (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000068C7E2B5C0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 142, in get_reply
+    all_info.update({"reply": ReplyUtils.get_reply_from_msg(msg, app_flag)})
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 99, in get_reply_from_msg
+    reply = ReplyUtils.tuling123(msg)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 77, in tuling123
+    r = requests.get(url, params=data, proxies=PROXIES)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 510, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=%E4%BD%A0%E5%A5%BD (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000068C7E2B5C0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+[2018-11-23 16:20:51,638] [ERROR] Internal Server Error: /get_reply/
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 80, in create_connection
+    raise err
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\connection.py", line 70, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "G:\python\python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "G:\python\python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "G:\python\python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000068C7E2BB38>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=%E4%BD%A0%E5%A5%BD (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000068C7E2BB38>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 142, in get_reply
+    all_info.update({"reply": ReplyUtils.get_reply_from_msg(msg, app_flag)})
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 99, in get_reply_from_msg
+    reply = ReplyUtils.tuling123(msg)
+  File "G:\python\pycharm2018\PycharmProjects1122\BotServer\wlserver\views.py", line 77, in tuling123
+    r = requests.get(url, params=data, proxies=PROXIES)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\jizhou\.virtualenvs\BotServer\lib\site-packages\requests\adapters.py", line 510, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='10.167.196.133', port=8080): Max retries exceeded with url: http://www.tuling123.com/openapi/api?key=11d8a7c5e9564a3fa5217bdd9a868778&info=%E4%BD%A0%E5%A5%BD (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000068C7E2BB38>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+[2018-11-23 16:20:51,721] [ERROR] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E4%BD%A0%E5%A5%BD&app_flag=0 HTTP/1.1" 500 188427
+[2018-11-23 16:20:51,842] [ERROR] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E4%BD%A0%E5%A5%BD&app_flag=0 HTTP/1.1" 500 188428
+[2018-11-23 16:22:04,289] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:22:04,297] [INFO] "GET /get_first_msg/ HTTP/1.1" 200 250
+[2018-11-23 16:22:14,350] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:22:14,352] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:22:14,355] [INFO] "GET /get_first_msg/ HTTP/1.1" 200 250
+[2018-11-23 16:22:14,357] [INFO] This is an error msg
+[2018-11-23 16:22:14,858] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E4%BA%86&app_flag=0 HTTP/1.1" 200 184
+[2018-11-23 16:22:18,300] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:22:18,305] [INFO] This is an error msg
+[2018-11-23 16:22:18,322] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:22:18,327] [INFO] This is an error msg
+[2018-11-23 16:22:18,680] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E5%93%A6&app_flag=0 HTTP/1.1" 200 190
+[2018-11-23 16:22:18,813] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E5%93%A6&app_flag=0 HTTP/1.1" 200 205
+[2018-11-23 16:23:32,635] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:23:32,640] [INFO] "GET /get_first_msg/ HTTP/1.1" 200 250
+[2018-11-23 16:23:36,237] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:23:36,242] [INFO] This is an error msg
+[2018-11-23 16:23:36,559] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E8%AE%B2&app_flag=0 HTTP/1.1" 200 196
+[2018-11-23 16:23:46,153] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:23:46,158] [INFO] This is an error msg
+[2018-11-23 16:23:46,450] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E5%A5%B9&app_flag=0 HTTP/1.1" 200 196
+[2018-11-23 16:23:54,480] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:23:54,484] [INFO] "GET /get_first_msg/ HTTP/1.1" 200 250
+[2018-11-23 16:23:57,154] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:23:57,158] [INFO] This is an error msg
+[2018-11-23 16:23:57,472] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E5%A5%B3&app_flag=0 HTTP/1.1" 200 223
+[2018-11-23 16:24:02,507] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:24:02,511] [INFO] This is an error msg
+[2018-11-23 16:24:02,826] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E6%88%91%E5%9C%A8&app_flag=0 HTTP/1.1" 200 184
+[2018-11-23 16:24:40,427] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:24:40,432] [INFO] "GET /get_first_msg/ HTTP/1.1" 200 250
+[2018-11-23 16:24:40,439] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:24:40,444] [INFO] "GET /get_first_msg/ HTTP/1.1" 200 250
+[2018-11-23 16:24:44,917] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:24:44,922] [INFO] This is an error msg
+[2018-11-23 16:24:45,122] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:24:45,129] [INFO] This is an error msg
+[2018-11-23 16:24:45,201] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E4%BD%A0&app_flag=0 HTTP/1.1" 200 211
+[2018-11-23 16:24:45,404] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E4%BD%A0&app_flag=0 HTTP/1.1" 200 211
+[2018-11-23 16:51:25,176] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:51:25,181] [INFO] "GET /get_first_msg/ HTTP/1.1" 200 250
+[2018-11-23 16:51:33,408] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:51:33,415] [INFO] "GET /get_first_msg/ HTTP/1.1" 200 250
+[2018-11-23 16:51:33,416] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:51:33,421] [INFO] This is an error msg
+[2018-11-23 16:51:33,895] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E4%BA%86&app_flag=0 HTTP/1.1" 200 205
+[2018-11-23 16:51:40,768] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:51:40,773] [INFO] This is an error msg
+[2018-11-23 16:51:40,776] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:51:40,780] [INFO] This is an error msg
+[2018-11-23 16:51:41,080] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E8%AE%B2&app_flag=0 HTTP/1.1" 200 196
+[2018-11-23 16:51:41,100] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E8%AE%B2&app_flag=0 HTTP/1.1" 200 199
+[2018-11-23 16:53:11,275] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:53:11,279] [INFO] "GET /get_first_msg/ HTTP/1.1" 200 250
+[2018-11-23 16:53:14,974] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:53:14,979] [INFO] This is an error msg
+[2018-11-23 16:53:15,511] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E5%A5%B3&app_flag=0 HTTP/1.1" 200 196
+[2018-11-23 16:54:45,439] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:54:45,443] [INFO] "GET /get_first_msg/ HTTP/1.1" 200 250
+[2018-11-23 16:54:48,178] [INFO] "GET /get_user_info/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&app_flag=0 HTTP/1.1" 200 112
+[2018-11-23 16:54:48,182] [INFO] This is an error msg
+[2018-11-23 16:54:48,495] [INFO] "GET /get_reply/?user_name=%E5%A4%95%E9%A2%9C%E5%A6%82%E6%A2%A6&content=%E5%90%A7&app_flag=0 HTTP/1.1" 200 250
+[2018-11-23 17:34:15,511] [ERROR] You're accessing the development server over HTTPS, but it only supports HTTP.
+
